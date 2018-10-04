@@ -7,7 +7,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("Ingrese un texto: ", (answer) => {
+rl.question("Ingrese caracteres: ", (answer) => {
   console.log(ExpressionMatcher(answer));
 
   rl.close();
@@ -27,6 +27,6 @@ const ExpressionMatcher = (str, openExpArr, closeExpArr) => {
     index++
   }
 
-  return tempArr.length === 0 ? 'Texto correcto' : 'Error en texto'
+  return tempArr.length === 0 ? 'Correcto' : 'Incorrecto'
 
 }
